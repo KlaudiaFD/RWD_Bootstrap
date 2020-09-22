@@ -1,0 +1,386 @@
+$blue-color: #039dff
+    
+*, *::after, *::before
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+
+html 
+    scroll-behavior: smooth
+
+body 
+    position: relative
+    font-family: 'Montserrat', sans-serif
+    background-color: #000000 
+    
+.blue-text
+    color: $blue-color
+
+.wrapper
+    max-width: 2560px
+    width: 80%
+    margin: 0 auto 
+
+h2 
+    text-transform: uppercase
+    text-align: center
+
+    p 
+        text-transform: none
+
+    
+
+.underline
+    width: 60px
+    height: 4px
+    background-color: $blue-color
+    margin: 0 auto 40px
+
+.scroll-fix::before
+    display: block
+    margin-top: -66px
+    height: 66px
+    content: " "
+// klasa scroll-fix::before - tworzy nam pusty pasek o szerokosci 66px (tyle ma nawigacja) i podajac wlasciwosc margin top -66px dajemy ten pusty pasek wyzej. dzieki temu nawigacja nie bedzie zjezdzala na stronie na napisy główne np: O NAS itp
+
+.visibility
+    visibility: hidden
+
+.jumbotron
+    margin: 0
+
+//NAWiGACJA
+
+nav 
+    text-transform: uppercase
+    transition: background-color .6s
+
+    a, i
+        color: #fff
+        transition: color .3s
+
+    a:hover 
+        color: $blue-color
+
+    i 
+        padding: 10px
+
+    .navbar-brand
+        font-weight: bold
+
+    .active
+        color: $blue-color
+
+.shadow-bg
+    background-color: rgba(0,0,0,.6)
+    
+
+//HEADER
+header
+    color: white
+    overflow: hidden
+
+    h1 
+        text-transform: uppercase
+        font-size: 36px
+        padding: 10px
+    
+
+    .hero-img
+        position: relative
+        height: 100vh
+        background-image: url('../img/video-small.jpg')
+        background-position: center
+        background-size: cover
+        background-attachment: fixed
+        z-index: 0
+        
+
+    .hero-shadow
+        position: absolute
+        width: 100%
+        height: 100%
+        background-color: rgba(0,0,0,.5)
+        z-index: -10
+
+    .hero-text
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        height: 100%
+        text-align: center
+
+        p 
+            padding: 10px
+            font-size: 14px
+        
+    .btn-outline-light
+        text-transform: uppercase
+
+    .fa-chevron-down
+        display: none
+
+
+//MAIN
+#aboutus
+    i 
+        font-size: 30px
+        margin-top: 30px
+
+    h3 
+        text-transform: uppercase
+        font-size: 18px
+
+    p 
+        font-size: 14px
+
+    .aboutus-hover
+        transition: color .3s
+        
+    
+    .aboutus-hover:hover
+        color: $blue-color 
+
+
+#aboutus-hero 
+    
+
+    .jumboron-image
+        background-image: url('../img/kod3.jpg')
+    
+    .jumbotron
+        padding: 60px 0
+        background-position: center
+        background-size: cover
+        color: #ddd 
+        overflow: hidden
+    
+        h2 
+            font-size: 32px
+
+        i 
+            font-size: 35px 
+        
+        p 
+            font-size: 14px
+
+    .about-hero-item
+        margin: 10px 0
+
+
+//PORTFOLIO na ma małych ekranach jest w całości w HTML
+#portfolio
+
+//CENNIK
+#prices
+    .jumbotron
+        background-color: #f9f9f9
+        
+
+    .price-wrap
+        max-width: 2560px
+        width: 95%
+        margin: 0 auto
+        
+
+    .price-box
+        margin: 20px 10px
+        padding: 30px
+        background-color: #fff 
+        box-shadow: 5px 5px 5px rgba(0,0,0,.6)
+        transition: transform .2s
+
+        h3 
+            color: $blue-color
+            text-transform: uppercase
+
+        span 
+            font-weight: bold
+
+        i 
+            font-size: 23px
+            padding: 0 5px
+
+        button
+            padding: 10px 20px
+            text-transform: uppercase 
+
+        .price
+            font-size: 30px
+            font-weight: bold
+
+    .price-text
+        margin-top: 30px
+        
+    .price-box:hover
+        transform: scale(1.05)
+
+
+//TEAM
+#team
+    .jumbotron
+        position: relative
+        background-image: url(../img/sala.jpg)
+        background-attachment: fixed
+        background-position: center
+        z-index: 0
+        
+        h2 
+            color: #ddd
+
+    .team-shadow
+        position: absolute
+        top: 0
+        width: 100%
+        height: 100%
+        background: rgba(0,0,0,.7)
+
+    .card
+        transition: transform .3s
+
+        img 
+            height: 300px
+            object-fit: cover //objekt wewnatrz tagu img ma sie dopasowac zeby ladnie to wygladało//
+            
+
+        i 
+            padding: 10px 20px 
+
+        .row
+            margin-left: 0
+            margin-right: 0
+
+    .card:hover
+        transform: scale(.96)
+
+    .card-body
+        height: 150px
+
+
+    .card-title
+        text-transform: uppercase
+        font-weight: bold
+        text-align: center
+
+    .card-text
+        font-size: 14px
+
+//OSIAGNIECIA
+#achievements
+    .achievement
+        text-align: center
+
+    i 
+        padding: 10px
+        font-size: 48px
+        color: #fff
+        text-shadow: 0 0 5px black
+
+    .achievement-number
+        font-size: 22px
+
+    .achievement-text
+        font-size: 13px 
+        text-transform: uppercase
+
+    .achievement-list
+        padding: 20px 0
+
+
+//KONTAKT
+#contact
+    .jumbotron
+        position: relative
+        background-image: url(../img/miasto-noca.jpg)
+        background-attachment: fixed
+        background-position: bottom
+        background-size: cover
+        z-index: 0
+
+        h2 
+            color: #fff
+            font-weight: bold 
+
+        .underline
+            background-color: #ccc
+
+    .contact-shadow
+        position: absolute
+        top: 0
+        width: 100%
+        height: 100%
+        background: rgba(0,0,0,.7)
+        z-index: -10
+
+    .contact-us
+        color: #fff 
+        display: flex 
+        align-items: center
+
+        .contact-item
+            margin: 30px 0
+
+            h3
+                text-transform: uppercase
+                margin-bottom: 15px
+                letter-spacing: 2px
+
+            .social-media
+                font-size: 26px
+
+                a 
+                    padding: 10px
+                    color: #fff 
+                    text-shadow: 0 0 5px black
+
+                a:hover 
+                    color: #ccc 
+
+//FOOTER
+footer 
+    color: #fff 
+
+    p 
+        padding: 20px
+        text-align: center
+        margin-bottom: 0
+
+
+
+
+@media (min-width: 375px)
+    header
+        h1 
+            font-size: 34px
+        
+        .hero-text
+            p 
+                font-size: 13px
+    
+    #aboutus-hero 
+        .jumbotron
+        h2 
+            font-size: 36px
+
+        h3 
+            font-size: 32px 
+        
+        p 
+            font-size: 18px
+
+    #team
+        .card-text
+            font-size: 15px
+
+@media (min-width: 414px)
+    #aboutus-hero
+        .jumbotron
+            padding: 80px 0
+
+
+@media (min-width: 500px)
+    #team
+        .card-body
+            height: 120px
