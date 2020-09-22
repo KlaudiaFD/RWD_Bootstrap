@@ -2,4 +2,4 @@
 
 ## Projekt z kursu na Udemy. ##
 
-## Live version ## https://klaudiafd.github.io/RWD_bootstrap/ 
+### Live version: https://klaudiafd.github.io/RWD_bootstrap/ 
